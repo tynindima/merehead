@@ -1,4 +1,4 @@
-const URL_USER = 'http://localhost:5000/api/users';
+const URL_USER = '/api/users';
 
 const getData = async <T>(): Promise<T> => {
   const response = await fetch(`${URL_USER}`);
