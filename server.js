@@ -11,7 +11,15 @@ app.get('/api/users', (req, res) => {
   const filePath = path.join(__dirname, 'src/api/users.json');
   const data = fs.readFileSync(filePath);
   res.json(JSON.parse(data));
-});git 
+});
+
+app.post('/api/users', (req, res) => {
+  console.log(req.body);
+  res.set('Access-Control-Allow-Origin', 'http://localhost:3000');
+  const filePath = path.join(__dirname, 'src/api/users.json');
+  const data = fs.readFileSync(filePath);
+  res.json(JSON.parse(data));
+});
 
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`);

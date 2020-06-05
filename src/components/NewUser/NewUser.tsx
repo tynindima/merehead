@@ -38,9 +38,16 @@ const NewUser: FC<Props> = (props) => {
     const user = { name, surname, desc };
 
     if (name !== '' && surname !== '' && desc !== '') {
+      hundleClear();
       postUser(user)
         .then(loadUsers);
     }
+  };
+
+  const hundleClear = () => {
+    setName('');
+    setSurname('');
+    setDesc('');
   };
 
   return (
