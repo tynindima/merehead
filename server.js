@@ -11,7 +11,7 @@ app.get('/api/users', (req, res) => {
   const filePath = path.join(__dirname, 'src/api/users.json');
   const data = fs.readFileSync(filePath);
   res.json(JSON.parse(data));
-});
+});git 
 
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`);
